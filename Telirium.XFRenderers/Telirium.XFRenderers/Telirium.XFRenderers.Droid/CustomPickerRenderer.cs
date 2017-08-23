@@ -1,9 +1,9 @@
-using Xamarin.Forms.Platform.Android;
-using Telirium.XFRenderers.Droid;
-using Telirium.XFRenderers;
-using Xamarin.Forms;
 using System.ComponentModel;
 using Android.Graphics.Drawables;
+using Telirium.XFRenderers;
+using Telirium.XFRenderers.Droid;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.Android;
 
 [assembly: ExportRenderer(typeof(CustomPicker), typeof(CustomPickerRenderer))]
 
@@ -16,12 +16,14 @@ namespace Telirium.XFRenderers.Droid
             base.OnElementChanged(e);
             SetControlStyle();
         }
+
         protected override void OnElementPropertyChanged(object sender, PropertyChangedEventArgs e)
         {
             base.OnElementPropertyChanged(sender, e);
             SetControlStyle();
         }
-        private void SetControlStyle()
+
+        void SetControlStyle()
         {
             if (Control != null)
             {

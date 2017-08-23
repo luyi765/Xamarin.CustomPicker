@@ -1,11 +1,9 @@
-﻿using Xamarin.Forms.Platform.iOS;
-using Xamarin.Forms;
-using System;
-using Telirium.XFRenderers.iOS;
+﻿using System.ComponentModel;
 using Telirium.XFRenderers;
+using Telirium.XFRenderers.iOS;
 using UIKit;
-using System.ComponentModel;
-using CoreGraphics;
+using Xamarin.Forms;
+using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(CustomPicker), typeof(CustomPickerRenderer))]
 
@@ -25,7 +23,7 @@ namespace Telirium.XFRenderers.iOS
             SetControlStyle();
         }
 
-        private void SetControlStyle()
+        void SetControlStyle()
         {
             if (Control != null)
             {
